@@ -4,11 +4,21 @@
   background-color: black;
 }
 
+input {
+  width: 100%;
+  height: 16.67%;
+  background-color: black;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: right;
+  font-size: 30px;
+}
+
 .row {
   display: flex;
   color: #ffffff;
   width: 100%;
-  height: 20%;
+  height: 16.67%;
 }
 
 .row > div {
