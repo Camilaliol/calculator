@@ -10,36 +10,36 @@
 
   <body>
     <div class="calculator">
-      <input id="input" type="text" />
+      <input id="input" type="text" value="0" />
       <div class="row">
-        <div>AC</div>
-        <div><-</div>
-        <div>%</div>
-        <div>/</div>
+        <div onclick="reset()">AC</div>
+        <div onclick="clear_one()"><-</div>
+        <div onclick="append('%')">%</div>
+        <div onclick="append('/')">/</div>
       </div>
       <div class="row">
         <div onclick="append(7)">7</div>
         <div onclick="append(8)">8</div>
         <div onclick="append(9)">9</div>
-        <div>*</div>
+        <div onclick="append('*')">*</div>
       </div>
       <div class="row">
         <div onclick="append(4)">4</div>
         <div onclick="append(5)">5</div>
         <div onclick="append(6)">6</div>
-        <div>-</div>
+        <div onclick="append('-')">-</div>
       </div>
       <div class="row">
         <div onclick="append(1)">1</div>
         <div onclick="append(2)">2</div>
         <div onclick="append(3)">3</div>
-        <div>+</div>
+        <div onclick="append('+')">+</div>
       </div>
 
       <div class="row">
         <div onclick="append(0)">0</div>
-        <div>.</div>
-        <div>=</div>
+        <div onclick="append ('.')">.</div>
+        <div onclick="calculate()">=</div>
       </div>
     </div>
   </body>
