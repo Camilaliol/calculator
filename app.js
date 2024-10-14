@@ -3,10 +3,19 @@ function append(caractere) {
 
   if (
     $input.value == "Error" ||
-    ($input.value == "0" && !"+/*".includes(caractere))
+    ($input.value == "0" && !"+/.%*".includes(caractere))
   ) {
     $input.value = caractere;
   } else {
+    // Determina se o usuário digitou um símbolo
+    const typed_symbol = "+/*-.%".includes(caractere);
+    // Determina se o último caractere digitado é um símbolo
+    const last_character_is_symbol = "+/*.%-".includes($input.value.slice(-1));
+
+    if (typed_symbol && last_character_is_symbol) {
+      // Remover o último caractere da string
+      $input.value = $input.value.slice(0, -1);
+    }
     $input.value = $input.value + caractere;
   }
 }
@@ -41,11 +50,10 @@ function validate(e) {
 function clear_one() {
   const $input = document.getElementById("input");
 
-  if ($input.value != "0") {
-    if ($input.value.length == 1) {
-      $input.value = "0";
-    } else {
-      $input.value = $input.value.slice(0, -1);
-    }
+  ped;
+  if ($input.value.length == 1) {
+    $input.value = "0";
+  } else {
+    $input.value = $input.value.slice(0, -1);
   }
 }
